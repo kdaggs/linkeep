@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Link:</b>
+  <%= link_to @link.url %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @link.name %>
+</p>
+
+<p>
+  <b>Created:</b>
+  <%= @link.created %>
+</p>
+
+<div class="button">
+	<%= link_to 'Edit', edit_link_path(@link) %>
+</div>
+<div class="button">
+	<%= link_to 'Back', links_path %>
+</div>

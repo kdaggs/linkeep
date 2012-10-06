@@ -1,0 +1,27 @@
+
+<table cellspacing=0>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Created</th>
+  </tr>
+
+<% @links.each do |link| %>
+  <tr id="link">
+    <td><%= link_to "#{link.url}", link.url %></td>
+    <td><%= link.name %></td>
+    <td><%= link.created %></td>
+  </tr>
+  <tr>
+    <td><%= link_to 'Show', link %> |
+        <%= link_to 'Edit', edit_link_path(link) %> | 
+        <%= link_to 'Destroy', link, method: :delete, data: {confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<div class="button">
+  <%= link_to 'New Link', new_link_path %>
+</div>
