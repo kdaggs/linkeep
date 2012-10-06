@@ -1,11 +1,28 @@
 require 'spec_helper'
 
 describe "Links" do
-  describe "GET /links" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get links_path
-      response.status.should be(200)
+
+    subject { page }
+
+    describe "index page" do
+        before { visit links_path }
+        it { should have_selector('th', text: 'Name') }
     end
-  end
+
+    describe "new page" do
+        before { visit new_link_path }
+        it { should have_selector('h1', text: 'Enter') }
+    end
+
+    describe "edit page" do
+        let(:link) { FactoryGirl.create(:link) }
+        before { visit edit_link_path(link) }
+        it { should have_selector('h1', text: 'link') }
+    end
+
+    describe "show page" do
+        let(:link) { FactoryGirl.create(:link) }
+        before { visit link_path(link) }
+        it { should have_selector('b', text: 'Link:') }
+    end
 end

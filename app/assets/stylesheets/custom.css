@@ -1,13 +1,25 @@
 *{margin:0;padding:0;}
+
 html, body {height:100%}
-#container {min-height: 100%;
+
+#container {
+  min-height: 100%;
 	min-height:100%;
 	height: auto !important;
 	height:100%;
-	margin:0 auto -35px;}
-#content {margin:0 auto;width: 700px ;}
-.push{height:35px;}
-#footer{
+	margin:0 auto -35px;
+}
+
+#content {
+  margin:0 auto;
+  width: 700px;
+}
+
+.push{
+  height:35px;
+}
+
+#footer {
 	background-color:#333333;
 	border-top:3px solid aqua;
 	height:35px;
@@ -17,14 +29,16 @@ html, body {height:100%}
 	text-align:right;
 }
 
-#header{
+#header {
 	background-color:#333333;
 	padding:20px;
 	border-bottom:3px solid aqua;
 	height:35px;
 	margin-bottom: 35px;
 }
-#header img{float:left;}
+
+#header img{
+  float:left;}
 #menu {
 	width:auto;
 	padding-left:80px;
@@ -141,4 +155,3 @@ body {
     list-style: square;
   }
 }
-input[type=submit] {color:red;}
